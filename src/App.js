@@ -1,20 +1,51 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, {Component} from 'react';
+import './App.css'
+import Register from './components/Register'
+import Login from './components/Login'
+import Canvas from './components/Canvas'
+import Dashboard from './components/Dashboard'
+import moth from './mothflamelarge.png'
+
 
 class App extends Component {
+
+  state = {
+    register: false,
+    login: false
+  }
+
+  handleClick = (e) => {
+      if (e.target.id === 'login'){
+        this.setState({
+        login: !this.state.login
+        })
+    } else {
+        this.setState({
+        register: !this.state.register
+        })
+    }
+  }
+
   render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
-    );
+    if(!this.state.register) {
+      return (
+        <div className="App">
+          <div className="mothy">
+            <img src={moth} className="moth-logo"/>
+          </div>
+          // this button needs to route to the login page
+            <button id='register' onClick={this.handleClick}>Register</button>
+              <br></br>
+            <button id='login' onClick={this.handleClick}>Login</button>
+        </div>
+      )
+    } else if (this.state.register){
+      return (
+        <div>
+          <Register />
+        </div>
+      )
+    }
   }
 }
 
