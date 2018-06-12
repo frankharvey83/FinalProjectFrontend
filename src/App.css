@@ -1,14 +1,18 @@
-.mothy {
-    width: 250px;
-    height: 170px;
+.App-logo {
+    width: 287px;
+    height: 384px;
+    display:inline-block;margin-right:10px;
 }
 
-/* resize images */
-.mothy img {
+.App-logo img {
     width: 100%;
     height: auto;
 }
 
 .App {
   text-align: center;
+}
+
+.register {
+  display:inline-block;
 }

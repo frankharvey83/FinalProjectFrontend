@@ -4,7 +4,7 @@ class Nav extends Component {
   render() {
     return (
       <div className="Nav">
-          <h1>Next page Previous Page</h1>
+          <h3>Previous Page, Next Page</h3>
       </div>
     );
   }

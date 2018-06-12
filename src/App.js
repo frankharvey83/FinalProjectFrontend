@@ -3,50 +3,30 @@ import './App.css'
 import Register from './components/Register'
 import Login from './components/Login'
 import Canvas from './components/Canvas'
+import Home from './components/Home'
 import Dashboard from './components/Dashboard'
+import Book from './components/Book'
 import moth from './mothflamelarge.png'
-
+import { Route, Link, NavLink, Switch, withRouter} from 'react-router-dom'
 
 class App extends Component {
 
-  state = {
-    register: false,
-    login: false
-  }
-
-  handleClick = (e) => {
-      if (e.target.id === 'login'){
-        this.setState({
-        login: !this.state.login
-        })
-    } else {
-        this.setState({
-        register: !this.state.register
-        })
-    }
-  }
-
   render() {
-    if(!this.state.register) {
+
       return (
         <div className="App">
-          <div className="mothy">
-            <img src={moth} className="moth-logo"/>
-          </div>
-          // this button needs to route to the login page
-            <button id='register' onClick={this.handleClick}>Register</button>
-              <br></br>
-            <button id='login' onClick={this.handleClick}>Login</button>
+          <Switch>
+            <Route path="/" exact><Home /></Route>
+            <Route path='/register' component={ Register }></Route>
+            <Route path='/dashboard' component={ Dashboard }></Route>
+            <Route path='/login' component={ Login }></Route>
+            <Route path='/canvas' component={ Dashboard }></Route>
+            <Route path='/book' component={ Book }></Route>
+          </Switch>
         </div>
       )
-    } else if (this.state.register){
-      return (
-        <div>
-          <Register />
-        </div>
-      )
-    }
+
   }
 }
 
-export default App;
+export default withRouter(App);
