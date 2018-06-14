@@ -4,12 +4,14 @@ import Dashboard from './Dashboard.js'
 
 class Register extends Component {
 
+
+
   render(){
+
     return (
       <div className="Register">
           <h1>This will be a registration page</h1>
-          <button>Register</button>
-
+          <button id='to-dashboard'><NavLink to='/Dashboard'>Register</NavLink></button>
       </div>
     );
   }

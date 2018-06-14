@@ -4,18 +4,10 @@ body {
   font-family: sans-serif;
 }
 
-.Book {
-  display:flex;
-  flex-direction:row;
-}
-
-.Book > div {
-  border: solid black 1px;
-  width:50%;
-}
-
-.left-half > img {
-  max-width: 100%;
+.page-image {
+   max-width: 100%;
+   max-height: 100vh;
+   margin: auto;
 }
 
 .nav > div {
@@ -31,10 +23,8 @@ body {
   -webkit-transform: matrix(1, 0, 0, -1, 0, 0)
 }
 
-.left-arrow {
-
- }
-
-.right-arrow {
-
+.text {
+    position: absolute;
+    top: 140px;
+    right: 80px;
 }

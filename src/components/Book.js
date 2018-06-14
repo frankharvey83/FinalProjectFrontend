@@ -35,15 +35,10 @@ class Book extends Component {
     console.log()
     return (
       <React.Fragment>
+    <div className="container">
       <div className="Book">
-
-        <div className="left-half">
-          <img src={this.state.currentPage.image_url}></img>
-        </div>
-        <div className="right-half">
-          <p>{this.state.currentPage.text}</p>
-        </div>
-
+          <img className='page-image' src={this.state.currentPage.image_url}/>
+          <div className="text">{this.state.currentPage.text}</div>
       </div>
 
       <div className="nav">
@@ -54,7 +49,7 @@ class Book extends Component {
           <img src='https://drive.google.com/uc?id=1DP1EadpaxjGNQWEMsOpgRTsGVluR1VpX' id='next' onClick={this.handleClick}></img>
         </div>
       </div>
-
+    </div>
       </React.Fragment>
     );
   }
