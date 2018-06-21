@@ -31,6 +31,16 @@ class Book extends Component {
     }
   }
 
+  displayText = () => {
+    if (this.state.currentPage.text){
+      let textArray = this.state.currentPage.text.split("/")
+      return textArray.map(text => {
+        console.log(text)
+        return <p className='book-text'>{text}</p>
+      })
+    }
+  }
+
   render(){
     console.log()
     return (
@@ -38,7 +48,7 @@ class Book extends Component {
     <div className="container">
       <div className="Book">
           <img className='page-image' src={this.state.currentPage.image_url}/>
-          <div className="text">{this.state.currentPage.text}</div>
+          <div className="text">{this.displayText()}</div>
       </div>
 
       <div className="nav">

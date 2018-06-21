@@ -1,21 +1,19 @@
 import React, { Component } from 'react';
 import moth from '../mothflamelarge.png'
 import { Route, Link, NavLink, Switch} from 'react-router-dom'
-import Register from './Register'
+import Dashboard from './Dashboard'
 
 class Home extends Component {
   render() {
     return (
       <div className="Home">
           <header className="App-header">
-            <img src={moth} className="App-logo" alt="logo"/>
-              <ul className="register">
-                  <NavLink activeClassName="active" to='/register'>Register</NavLink>
-              </ul>
+            <h4>Click below to register. You will recieve a random member number since you are a kid and all. To keep you safe, we do not want to store any data or sensitive details about you.</h4>
+            <Link to='/dashboard'><img src={moth} className="App-logo" alt="logo"/></Link>
           </header>
 
-          <Route path='/register' component={ Register }></Route>
-          
+          <Route path='/dashboard' component={ Dashboard }></Route>
+
       </div>
     );
   }
