@@ -2,7 +2,7 @@
 
 ![React](https://img.shields.io/badge/react.js-16.3.2-brightgreen.svg)
 ![Rails](https://img.shields.io/badge/Rails-5.1.6-red.svg)
-![[License](https://img.shields.io/badge/license-MIT-blue.svg)(https://opensource.org/licenses/MIT)
+
 
 ## Overview
 An interactive story book for kids. Written and illustrated by Frank Harvey McManus.
