@@ -1,3 +1,6 @@
+*{
+  font-family: 'Bree Serif', sans-serif;
+}
 body {
   margin: 0;
   padding: 0;
@@ -10,13 +13,13 @@ body {
 
 .book-text {
   font-family: 'Bree Serif', sans-serif;
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 900;
 }
 
 .card {
   box-shadow: 0 6px 10px 0 rgba(0,0,0,0.2);
-  max-width: 300px;
+  max-width: 200px;
   margin: auto;
   text-align: center;
   border-radius: 25px;

@@ -1,5 +1,19 @@
 import React, { Component } from 'react';
 import { Route, Link, NavLink, Switch, Redirect} from 'react-router-dom'
+import {
+  Button,
+  Container,
+  Grid,
+  Header,
+  Icon,
+  Image,
+  Item,
+  Label,
+  Menu,
+  Segment,
+  Step,
+  Table,
+} from 'semantic-ui-react'
 
 class Dashboard extends Component {
   state = {
@@ -26,7 +40,6 @@ class Dashboard extends Component {
   render() {
     return (
       <div className="card-page">
-
         <div className="card">
           <div className="image">
             <img className="profile-pic" src='https://drive.google.com/uc?id=1dkuSdW5Pl7Wp5cADpv3e3kCKZ2j7BhOa'></img>

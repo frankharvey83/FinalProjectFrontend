@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Route, Link, NavLink, Switch, Redirect} from 'react-router-dom'
 import Nav from './Nav'
+
 class Book extends Component {
 
   state = {
@@ -20,11 +21,11 @@ class Book extends Component {
 
   handleClick = (e) => {
     e.preventDefault()
-    if(e.target.id === 'next'){
+    if(e.target.id === 'next' && this.state.currentPage.id - 1<= this.state.pages.length){
       this.setState({
         currentPage: this.state.pages.find((page) => page.id === this.state.currentPage.id + 1)
       })
-    } else if (e.target.id === 'previous') {
+    } else if (e.target.id === 'previous' && this.state.currentPage.id !== 3 ) {
       this.setState({
         currentPage: this.state.pages.find((page) => page.id === this.state.currentPage.id - 1)
       })
@@ -41,8 +42,18 @@ class Book extends Component {
     }
   }
 
+  // displayBook = () => {
+  //   if (this.state.currentPage !== undefined){
+  //     return (
+  //
+  //     )
+  //   } else {
+  //     return null
+  //   }
+  // }
+
   render(){
-    console.log()
+    console.log(this.state.currentPage)
     return (
       <React.Fragment>
     <div className="container">

@@ -8,7 +8,7 @@ class Home extends Component {
     return (
       <div className="Home">
           <header className="App-header">
-            <h4>Click below to register. You will recieve a random member number since you are a kid and all. To keep you safe, we do not want to store any data or sensitive details about you.</h4>
+            <p className='disclaimer'>Click below to register. You will recieve a random member number since you are a kid and all. To keep you safe, we do not want to store any data or sensitive details about you.</p>
             <Link to='/dashboard'><img src={moth} className="App-logo" alt="logo"/></Link>
           </header>
 
