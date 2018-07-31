@@ -5,8 +5,7 @@ import Login from './components/Login'
 import Home from './components/Home'
 import Dashboard from './components/Dashboard'
 import Book from './components/Book'
-import moth from './mothflamelarge.png'
-import { Route, Link, NavLink, Switch, withRouter} from 'react-router-dom'
+import { Route, Link, NavLink, Switch, withRouter } from 'react-router-dom'
 
 class App extends Component {
 

@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import moth from '../mothflamelarge.png'
-import { Route, Link, NavLink, Switch} from 'react-router-dom'
+import { Route, Link, NavLink, Switch } from 'react-router-dom'
 import Dashboard from './Dashboard'
 
 class Home extends Component {

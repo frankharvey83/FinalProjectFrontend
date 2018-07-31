@@ -1,19 +1,5 @@
 import React, { Component } from 'react';
 import { Route, Link, NavLink, Switch, Redirect} from 'react-router-dom'
-import {
-  Button,
-  Container,
-  Grid,
-  Header,
-  Icon,
-  Image,
-  Item,
-  Label,
-  Menu,
-  Segment,
-  Step,
-  Table,
-} from 'semantic-ui-react'
 
 class Dashboard extends Component {
   state = {
